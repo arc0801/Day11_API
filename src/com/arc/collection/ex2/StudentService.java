@@ -5,15 +5,25 @@ import java.util.Scanner;
 
 public class StudentService {
 
-	//메서드명 studentSearch
-	//학생의 이름을 입력 받아서, 이름이 같은 학생을 리턴
-	//못 찾으면
 	private Scanner sc;
 	
 	public StudentService() {
 		sc = new Scanner(System.in);
 	}
 
+	//studentDelete
+	//이름을 입력해서 해당학생정보를 삭제
+	
+	
+	
+	
+	
+	
+	
+	
+	//메서드명 studentSearch
+	//학생의 이름을 입력 받아서, 이름이 같은 학생을 리턴
+	//못 찾으면
 	public Student studentSearch(ArrayList<Student> students) {
 		
 		System.out.println("조회하실 학생의 이름을 입력하세요");
