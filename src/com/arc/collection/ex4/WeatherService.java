@@ -10,25 +10,24 @@ public class WeatherService {
 	private Scanner sc;
 	private StringBuffer sb;
 	
-	
-	
 	public WeatherService() {
 		sb = new StringBuffer();
 		sb.append("Seoul-17.2-60-흐림-");
 		sb.append("Daejeon-29.9-20-맑음-");
 		sb.append("Jeju-1.2-99-눈-");
 		sb.append("Incheon-89-20-불");
+		sc = new Scanner(System.in);
 	//문자열하나 파싱하는거 토크나이저 사용
 	}
 	
 	//메서드명 init
 	//날씨 정보를 파싱해서 저장
 	public HashMap<String, Weather> init() {
-		StringTokenizer st = new StringTokenizer(sb.toString().concat("-"));
+		StringTokenizer st = new StringTokenizer(sb.toString(), "-");
 		//HashMap에 추가
 		//키는 도시명, value weather
 		//리턴은 HashMap
-		HashMap<String, Weather> wt = new HashMap<String, Weather>();
+		HashMap<String, Weather> map = new HashMap<String, Weather>();
 		
 		while(st.hasMoreTokens()) {
 			Weather weather = new Weather();
@@ -36,10 +35,20 @@ public class WeatherService {
 			weather.setGion(Double.parseDouble(st.nextToken()));
 			weather.setHumidity(Integer.parseInt(st.nextToken()));
 			weather.setStatus(st.nextToken());
-			wt.put(weather.getCity(), weather);
+			
+			map.put(weather.getCity(), weather);
 		}
-		return wt;
+		return map;
 	}//init
+	
+	public Weather addweather(HashMap<String, Weather> map) {
+		Weather weather = new Weather();
+		System.out.println("도시를 입력하세요");
+		System.out.println("기온을 입력하세요");
+		System.out.println("습도를 입력하세요");
+		System.out.println("상태를 입력하세요");
+		
+	}
 	
 	
 	public Weather findWeather(HashMap<String, Weather> map) {
