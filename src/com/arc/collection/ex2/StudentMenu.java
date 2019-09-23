@@ -34,7 +34,8 @@ public class StudentMenu {
 			System.out.println("4. 학생 정보 삭제");
 			System.out.println("5. 프로그램  종료");
 			int select = sc.nextInt();
-
+			Student student;
+			
 			switch(select) {
 			case 1:
 				ss.studentInput(students);
@@ -45,11 +46,13 @@ public class StudentMenu {
 				break;
 				
 			case 3:
-				Student student = ss.studentSearch(students);
+				student = ss.studentSearch(students);
 				sv.view(student);
 				break;
 				
 			case 4:
+				//student = ss.studentDelete(students, student);
+				
 				System.out.println("학생 정보 삭제");
 				break;
 				

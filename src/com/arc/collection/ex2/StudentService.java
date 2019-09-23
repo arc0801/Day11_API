@@ -3,6 +3,8 @@ package com.arc.collection.ex2;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.sun.xml.internal.ws.api.pipe.NextAction;
+
 public class StudentService {
 
 	private Scanner sc;
@@ -13,7 +15,26 @@ public class StudentService {
 
 	//studentDelete
 	//이름을 입력해서 해당학생정보를 삭제
-	
+	public Student studentDelete(ArrayList<Student> students, Student student) {
+		//students.remove(student);
+		
+		System.out.println("삭제 학생 이름");
+		String name = sc.next();
+		//boolean check = false;
+		Student st = null;
+		
+		for(int i=0;i<students.size();i++) {
+			if(students.get(i).getName().equals(name)) {
+				st=students.remove(i);
+				//check=true;
+				break;
+			}
+		}
+		
+		return st;
+		
+		
+	}
 	
 	
 	
