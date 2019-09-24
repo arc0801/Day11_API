@@ -44,7 +44,7 @@ public class WeatherMenu {
 				break;
 
 			case 2:
-				ws.addweather(map);
+				ws.addWeather(map);
 				break;
 
 			case 3:

@@ -41,25 +41,32 @@ public class WeatherService {
 		return map;
 	}//init
 	
-	public Weather addweather(HashMap<String, Weather> map) {
+	
+	//메서드명 addweather
+	//날씨 정보를 입력받아서 추가
+	public Weather addWeather(HashMap<String, Weather> map) {
 		Weather weather = new Weather();
 		System.out.println("도시를 입력하세요");
+		weather.setCity(sc.next());
 		System.out.println("기온을 입력하세요");
+		weather.setGion(sc.nextDouble());
 		System.out.println("습도를 입력하세요");
+		weather.setHumidity(sc.nextInt());
 		System.out.println("상태를 입력하세요");
+		weather.setStatus(sc.next());
+		map.put(weather.getCity(), weather);
 		
-	}
+		return weather;
+	}//addWeather
 	
 	
 	public Weather findWeather(HashMap<String, Weather> map) {
 		//도시명을 입력 받아서 해당Weather 검색
 		//weather를 리턴
-		Weather weather = new Weather();
-		
+		//Weather weather = new Weather();
 		System.out.println("도시명을 입력하세요");
-		String city = sc.next();
-		
-		weather = map.get(city);
+		String name = sc.next();
+		Weather weather = map.get(name);
 		
 		return weather;
 	}//findWeather
@@ -69,13 +76,10 @@ public class WeatherService {
 		//도시명입력 받아서 해당 정보(weather)를 삭제
 		System.out.println("삭제 도시명");
 		String city = sc.next();
-		
 		Weather weather = map.remove(city);
 		
 		return weather;
 	}//deleteWeather
-	
-	
 	
 	
 }
