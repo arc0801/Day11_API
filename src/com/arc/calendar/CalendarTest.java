@@ -17,7 +17,7 @@ public class CalendarTest {
 		int year = cal.get(Calendar.YEAR);
 		int mon = cal.get(Calendar.MONTH);//1월 -> 0, 2월 -> 1, 3월 -> 2...
 		int date = cal.get(Calendar.DATE);
-		int d = cal.get(Calendar.DAY_OF_MONTH);
+		int d = cal.get(Calendar.DAY_OF_WEEK);
 		
 		System.out.println(hour);
 		System.out.println(min);

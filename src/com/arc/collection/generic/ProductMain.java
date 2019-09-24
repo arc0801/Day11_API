@@ -12,7 +12,8 @@ public class ProductMain {
 		
 		ArrayList<? extends Computer> ar = new ArrayList<Computer>();
 		//Computer와 Computer를 상속받은 타입.
-		ar.addAll(computer);
+		
+		//ar.addAll(computer);
 		
 		
 		
