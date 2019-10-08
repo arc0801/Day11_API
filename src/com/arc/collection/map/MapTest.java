@@ -24,6 +24,7 @@ public class MapTest {
 		//반복문
 		//1. key
 		//Iterator(반복자) - 또다른 Collection의 한 종류
+		//
 		Iterator<String> it = map.keySet().iterator();
 		
 		while(it.hasNext()) {
